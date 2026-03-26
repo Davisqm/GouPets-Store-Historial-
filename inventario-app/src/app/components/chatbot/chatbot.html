@@ -1,0 +1,29 @@
+<!-- BOTÓN FLOTANTE -->
+<button class="chat-btn" (click)="toggleChat()">💬</button>
+
+<!-- CHAT DESPLEGABLE -->
+<div class="chat-window" *ngIf="abierto">
+
+  <div class="chat-header">
+    <span>Chatbot GouPets Sistema de Inventarios</span>
+    <button (click)="toggleChat()">✖</button>
+  </div>
+
+  <div class="mensajes">
+    <div
+      *ngFor="let msg of mensajes"
+      [ngClass]="{ usuario: msg.esUsuario, bot: !msg.esUsuario }">
+      {{ msg.texto }}
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input
+      [(ngModel)]="textoUsuario"
+      (keyup.enter)="enviarMensaje()"
+      placeholder="Escribe un mensaje..."
+    />
+    <button (click)="enviarMensaje()">Enviar</button>
+  </div>
+
+</div>

@@ -1,0 +1,139 @@
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mensajes {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.usuario {
+  text-align: right;
+  background: #d1e7ff;
+  margin: 4px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.bot {
+  text-align: left;
+  background: #f1f1f1;
+  margin: 4px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 22, 26, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 998;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.4);
+
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.chat-header {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  padding: 10px 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.usuario {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.bot {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.chat-window {
+  animation: chatOpen 0.25s ease-out;
+}
+
+@keyframes chatOpen {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+

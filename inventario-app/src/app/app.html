@@ -1,0 +1,78 @@
+<div class="container">
+  <nav
+    class="navbar navbar-expand-lg bg-body-tertiary navbar-dark"
+    style="
+      background-color: #8c0aef;
+      border-bottom: 3px solid darkgoldenrod;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    "
+  >
+    <div class="container-fluid">
+      <a
+        class="navbar-brand"
+        routerLink="productos"
+        style="
+          border: 2px solid rgba(255, 255, 255, 0.8);
+          border-radius: 25px;
+          padding: 6px 16px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          background-color: rgba(255, 255, 255, 0.1);
+        "
+        >Sistema de Inventarios GouPets</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="productos"
+              routerLinkActive="active"
+              style="
+                border-radius: 20px;
+                padding: 8px 18px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+              "
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/agregar-producto"
+              routerLinkActive="active"
+              style="
+                border-radius: 20px;
+                padding: 8px 18px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+              "
+              >Agregar Producto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<router-outlet />
+<app-chatbot></app-chatbot>
+
+<style>
+  .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+</style>
